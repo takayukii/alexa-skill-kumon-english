@@ -1,0 +1,13 @@
+{
+  "intents": [
+    {
+      "intent": "ShadowIntent",
+      "slots": [
+        {
+          "name": "Shadow",
+          "type": "LIST_OF_SHADOWS"
+        }
+      ]
+    }
+  ]
+}
