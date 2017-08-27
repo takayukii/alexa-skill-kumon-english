@@ -19,6 +19,19 @@
       ]
     },
     {
+      "intent": "QuestionAnswerIntent",
+      "slots": [
+        {
+          "name": "QuestionAnswer",
+          "type": "LIST_OF_QUESTION_ANSWERS"
+        },
+        {
+          "name": "QuestionAnswerExample",
+          "type": "LIST_OF_QUESTION_ANSWER_EXAMPLES"
+        }
+      ]
+    },
+    {
       "intent": "AMAZON.StopIntent"
     },
     {

@@ -1,2 +1,3 @@
 PracticeIntent {Practice}
 ShadowIntent {Shadow}
+QuestionAnswerIntent {QuestionAnswer} {QuestionAnswerExample}

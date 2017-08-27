@@ -5,7 +5,7 @@ const stringSimilarity = require('string-similarity');
 
 const STATE = {
   SHADOWING: 'SHADOWING',
-  QUESTIONS: 'QUESTIONS'
+  QUESTION_ANSWERS: 'QUESTION_ANSWERS'
 };
 
 const LIST_OF_SHADOWS = [
@@ -13,6 +13,19 @@ const LIST_OF_SHADOWS = [
   "I like juice",
   "I like coffee",
   "I like tea"
+];
+
+const LIST_OF_QUESTION_ANSWERS = [
+  {
+    question: "Which do you want?",
+    answer: "I want the ?",
+    examples: ["ring", "watch", "shirt", "jacket"]
+  },
+  {
+    question: "What color do you want?",
+    answer: "I want ?",
+    examples: ["pink", "blue", "green", "white"]
+  }
 ];
 
 const handlers = {
@@ -24,7 +37,7 @@ const handlers = {
     const message =
       'Welcome to kumon English practice service. ' +
       'We\'re offering shadowing practice and questions and answers practice. ' +
-      'Which one do you want to try?';
+      'Which practice do you want to try?';
     this.emit(':ask', message, 'Please say that again?');
   },
   'PracticeIntent': function () {
@@ -34,24 +47,25 @@ const handlers = {
       this.handler.state = STATE.SHADOWING;
       this.emitWithState('Init');
     } else if (practice === 'questions and answers') {
-      this.emit(':tell', 'Under construction. bye');
+      this.handler.state = STATE.QUESTION_ANSWERS;
+      this.emitWithState('Init');
     } else {
       this.emit('AskPractice');
     }
   },
-  'AMAZON.StopIntent': function() {
+  'AMAZON.StopIntent': function () {
     this.emit(':tell', 'Thank you, see you at next time');
   },
-  'AMAZON.CancelIntent': function() {
+  'AMAZON.CancelIntent': function () {
     this.emit(':tell', 'Thank you, see you at next time');
   },
-  'Unhandled': function() {
+  'Unhandled': function () {
     console.log('handlers Unhandled');
     this.emit('AskPractice');
   }
 };
 
-const shadowingHandlers =  Alexa.CreateStateHandler(STATE.SHADOWING, {
+const shadowingHandlers = Alexa.CreateStateHandler(STATE.SHADOWING, {
   'Init': function () {
     console.log('shadowingHandlers Init');
     this.attributes['LIST_OF_SHADOWS'] = LIST_OF_SHADOWS;
@@ -85,7 +99,7 @@ const shadowingHandlers =  Alexa.CreateStateHandler(STATE.SHADOWING, {
     const percentage = Math.floor(similarity * 100);
     this.attributes['percentage'] = percentage;
 
-    if (percentage > 70) {
+    if (percentage > 50) {
       if (this.attributes['count'] + 1 < this.attributes['LIST_OF_SHADOWS'].length) {
         this.attributes['count'] += 1;
         this.emitWithState('AskShadow');
@@ -94,28 +108,99 @@ const shadowingHandlers =  Alexa.CreateStateHandler(STATE.SHADOWING, {
       }
     } else {
       this.attributes['repeating'] = true;
-      this.emit('AskShadow');
+      this.emitWithState('AskShadow');
     }
   },
-  'AMAZON.StopIntent': function() {
+  'AMAZON.StopIntent': function () {
     this.emit(':tell', 'Thank you, see you at next time');
   },
-  'AMAZON.CancelIntent': function() {
+  'AMAZON.CancelIntent': function () {
     this.emit(':tell', 'Thank you, see you at next time');
   },
-  'Unhandled': function() {
+  'Unhandled': function () {
     console.log('shadowingHandlers Unhandled');
     this.emitWithState('AskShadow');
   }
 });
 
+const questionAnswerHandlers = Alexa.CreateStateHandler(STATE.QUESTION_ANSWERS, {
+  'Init': function () {
+    console.log('questionAnswerHandlers Init');
+    this.attributes['LIST_OF_QUESTION_ANSWERS'] = LIST_OF_QUESTION_ANSWERS;
+    this.attributes['count'] = 0;
+    this.attributes['question'] = '';
+    this.attributes['answer'] = '';
+    this.attributes['example'] = '';
+    this.attributes['repeating'] = false;
+    this.emitWithState('AskQuestionAnswer');
+  },
+  'AskQuestionAnswer': function () {
+    console.log('questionAnswerHandlers AskQuestionAnswer');
+    const questionAnswers = this.attributes['LIST_OF_QUESTION_ANSWERS'];
+    let intro = `Please answer the following question. `;
+    if (this.attributes['count'] > 0) {
+      intro = `Good. Your answer is ${this.attributes['example']}. Let's move on next question. `;
+    }
+    if (this.attributes['repeating']) {
+      intro = `Hmm, you said ${this.attributes['answer']} ${this.attributes['example']}. One more time. `;
+      this.attributes['repeating'] = false;
+    }
+    intro += `I want you to answer like ${questionAnswers[this.attributes['count']].answer.replace('?', 'blah blah')}. Question ${this.attributes['count'] + 1}. `;
+    const question = questionAnswers[this.attributes['count']].question;
+    this.emit(':ask', intro + question, 'Please say that again?');
+  },
+  'QuestionAnswerIntent': function () {
+    console.log('questionAnswerHandlers QuestionAnswerIntent');
+    this.attributes['answer'] = this.event.request.intent.slots.QuestionAnswer.value;
+    this.attributes['example'] = this.event.request.intent.slots.QuestionAnswerExample.value;
+    const answer = this.attributes['answer'];
+
+    const questionAnswers = this.attributes['LIST_OF_QUESTION_ANSWERS'];
+    const questionAnswer = questionAnswers[this.attributes['count']];
+
+    const similarity = stringSimilarity.compareTwoStrings(questionAnswer.answer.replace('?', ''), answer);
+    const percentage = Math.floor(similarity * 100);
+    if (percentage > 50) {
+      if (this.attributes['count'] + 1 < this.attributes['LIST_OF_QUESTION_ANSWERS'].length) {
+        this.attributes['count'] += 1;
+        this.emitWithState('AskQuestionAnswer');
+      } else {
+        this.emit(':tell', `Good. Your answer is ${this.attributes['example']}. Thank you very much. See you at next time!`);
+      }
+    } else {
+      this.attributes['repeating'] = true;
+      this.emitWithState('AskQuestionAnswer');
+    }
+  },
+  'AMAZON.StopIntent': function () {
+    this.emit(':tell', 'Thank you, see you at next time');
+  },
+  'AMAZON.CancelIntent': function () {
+    this.emit(':tell', 'Thank you, see you at next time');
+  },
+  'Unhandled': function () {
+    console.log('questionAnswerHandlers Unhandled');
+    this.emitWithState('AskQuestionAnswer');
+  }
+});
+
 module.exports.kumon = (event, context, callback) => {
   const alexa = Alexa.handler(event, context, callback);
-  alexa.registerHandlers(handlers, shadowingHandlers);
+  alexa.registerHandlers(handlers, shadowingHandlers, questionAnswerHandlers);
   alexa.execute();
 };
 
 console.log('LIST_OF_SHADOWS');
 for (const shadow of LIST_OF_SHADOWS) {
   console.log(shadow);
+}
+console.log('LIST_OF_QUESTION_ANSWERS');
+for (const question of LIST_OF_QUESTION_ANSWERS) {
+  console.log(question.answer.replace('?', ''));
+}
+console.log('LIST_OF_QUESTION_ANSWER_EXAMPLES');
+for (const question of LIST_OF_QUESTION_ANSWERS) {
+  for (const example of question.examples) {
+    console.log(example);
+  }
 }
