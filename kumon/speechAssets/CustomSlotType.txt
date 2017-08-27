@@ -1,5 +1,9 @@
+LIST_OF_PRACTICES
+shadowing
+questions and answers
+
 LIST_OF_SHADOWS
-which do you want?
-I want the ring
-what color do you want?
-I want pink
+I like milk
+I like juice
+I like coffee
+I like tea

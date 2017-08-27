@@ -1,6 +1,15 @@
 {
   "intents": [
     {
+      "intent": "PracticeIntent",
+      "slots": [
+        {
+          "name": "Practice",
+          "type": "LIST_OF_PRACTICES"
+        }
+      ]
+    },
+    {
       "intent": "ShadowIntent",
       "slots": [
         {
@@ -8,6 +17,18 @@
           "type": "LIST_OF_SHADOWS"
         }
       ]
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    },
+    {
+      "intent": "AMAZON.StartOverIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
     }
   ]
 }
