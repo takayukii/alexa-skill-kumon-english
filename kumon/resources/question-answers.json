@@ -1,0 +1,12 @@
+[
+  {
+    "question": "Which do you want?",
+    "answer": "I want the ?",
+    "examples": ["ring", "watch", "shirt", "jacket"]
+  },
+  {
+    "question": "What color do you want?",
+    "answer": "I want ?",
+    "examples": ["pink", "blue", "green", "white"]
+  }
+]

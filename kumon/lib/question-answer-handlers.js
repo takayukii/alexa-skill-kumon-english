@@ -2,28 +2,19 @@
 
 const Alexa = require('alexa-sdk');
 const stringSimilarity = require('string-similarity');
+const {shuffle} = require('./utils');
 
 const MSG_RE_PROMPT = 'Please say that again?';
 const MSG_THANK_YOU = 'Thank you very much. See you at next time!';
 
-const LIST_OF_QUESTION_ANSWERS = [
-  {
-    question: 'Which do you want?',
-    answer: 'I want the ?',
-    examples: ['ring', 'watch', 'shirt', 'jacket']
-  },
-  {
-    question: 'What color do you want?',
-    answer: 'I want ?',
-    examples: ['pink', 'blue', 'green', 'white']
-  }
-];
+const LIST_OF_QUESTION_ANSWERS = require('../resources/question-answers.json');
 
 function createHandler(state) {
   return Alexa.CreateStateHandler(state, {
     'Start': function () {
       console.log('QUESTION_ANSWER Start');
-      this.attributes['questionAnswers'] = LIST_OF_QUESTION_ANSWERS;
+      shuffle(LIST_OF_QUESTION_ANSWERS);
+      this.attributes['questionAnswers'] = LIST_OF_QUESTION_ANSWERS.slice(0, 5);
       this.attributes['count'] = 0;
       this.attributes['answer'] = '';
       this.attributes['example'] = '';
@@ -34,7 +25,7 @@ function createHandler(state) {
       console.log('QUESTION_ANSWER AskQuestionAnswer');
       const questionAnswers = this.attributes['questionAnswers'];
       let intro = `Please answer the following question. `;
-      if (this.attributes['count'] > 0 ) {
+      if (this.attributes['count'] > 0) {
         intro = `Good. Your answer is ${this.attributes['example']}. Let's move on next question. `;
       }
       if (this.attributes['again'] === true) {
@@ -45,8 +36,7 @@ function createHandler(state) {
         this.emit(':tell', `Good. Your answer is ${this.attributes['example']}. ` + MSG_THANK_YOU);
       } else {
         intro += `I want you to answer like ${questionAnswers[this.attributes['count']].answer.replace('?', 'blah blah')}. Question ${this.attributes['count'] + 1}. `;
-        const question = questionAnswers[this.attributes['count']].question;
-        this.emit(':ask', intro + question, MSG_RE_PROMPT);
+        this.emit(':ask', intro + questionAnswers[this.attributes['count']].question, MSG_RE_PROMPT);
       }
     },
     'QuestionAnswerIntent': function () {

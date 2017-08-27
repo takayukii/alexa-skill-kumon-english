@@ -1,4 +1,4 @@
-# Serverless Alexa Skill Examples
+# Alexa Skill "Kumon English"
 
 ## Environment
 

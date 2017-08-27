@@ -2,22 +2,19 @@
 
 const Alexa = require('alexa-sdk');
 const stringSimilarity = require('string-similarity');
+const {shuffle} = require('./utils');
 
 const MSG_RE_PROMPT = 'Please say that again?';
 const MSG_THANK_YOU = 'Thank you very much. See you at next time!';
 
-const LIST_OF_LISTEN_REPEATS = [
-  'I like milk',
-  'I like juice',
-  'I like coffee',
-  'I like tea'
-];
+const LIST_OF_LISTEN_REPEATS = require('../resources/listen-repeats.json');
 
 function createHandlers(state) {
   return Alexa.CreateStateHandler(state, {
     'Start': function () {
       console.log('LISTEN_REPEAT Start');
-      this.attributes['listenRepeats'] = LIST_OF_LISTEN_REPEATS;
+      shuffle(LIST_OF_LISTEN_REPEATS);
+      this.attributes['listenRepeats'] = LIST_OF_LISTEN_REPEATS.slice(0, 5);
       this.attributes['count'] = 0;
       this.attributes['repeat'] = '';
       this.attributes['percentage'] = 0;
