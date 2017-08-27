@@ -56,9 +56,9 @@ function createHandler(state) {
               }
             }
           }
-          intro += `I want you to answer like following. ${example} `;
+          intro += `I want you to answer like ${example} `;
         }
-        intro += `Question ${count + 1}. `;
+        intro += `Question ${count + 1}. <break time='1s'/>`;
         this.emit(':ask', `${intro}${questionAnswers[count].question}`, MSG_RE_PROMPT);
       }
     },
@@ -68,7 +68,7 @@ function createHandler(state) {
       this.attributes['answer'] = this.event.request.intent.slots.QuestionAnswer.value;
       this.attributes['example'] = this.event.request.intent.slots.QuestionAnswerExample.value;
 
-      const {questionAnswers, count, answer, example} = this.attributes;
+      const {questionAnswers, count, answer} = this.attributes;
 
       let similarity = 0;
       if (typeof questionAnswers[count].answer === 'string') {
