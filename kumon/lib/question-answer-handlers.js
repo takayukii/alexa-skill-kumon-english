@@ -30,10 +30,23 @@ function createHandler(state) {
         intro = `Good. Let's move on next question. `;
       }
       if (again === true) {
-        if (example) {
-          intro = `Hmm, you said ${answer} ${example}. One more time. `;
+        if (answer) {
+          if (example) {
+            intro = `Hmm, you said ${answer} and ${example}. `;
+          } else {
+            intro = `Hmm, you said ${answer}. `;
+          }
         } else {
-          intro = `Hmm, you said ${answer}. One more time. `;
+          intro = `Hmm, I couldn't get what you said. `;
+        }
+        if (againCount === 5) {
+          const remains = LIST_OF_QUESTION_ANSWERS.slice(5);
+          const idx = Math.floor(Math.random() * (remains.length - 1));
+          questionAnswers[count] = remains[idx];
+          this.attributes['againCount'] = 0;
+          intro += `Try another one. `;
+        } else {
+          intro += `One more time. `;
         }
       }
       if (count === questionAnswers.length) {
@@ -72,7 +85,7 @@ function createHandler(state) {
 
       let similarity = 0;
       if (typeof questionAnswers[count].answer === 'string') {
-        const expectedAnswer = questionAnswers[count].answer.replace('?', '').replace(' .', '').trim();
+        const expectedAnswer = questionAnswers[count].answer.replace('?', '').replace(' .', '').replace(/[^0-9|a-zA-Z| ]/ig, '').replace('  ', ' ').trim();
         similarity = stringSimilarity.compareTwoStrings(expectedAnswer, answer);
         console.log('QUESTION_ANSWER QuestionAnswerIntent similarity', expectedAnswer, answer, similarity);
       } else {
@@ -107,8 +120,8 @@ function createHandler(state) {
       console.log('QUESTION_ANSWER Unhandled');
       this.attributes['again'] = true;
       this.attributes['againCount'] += 1;
-      this.attributes['answer'] = 'inaudible';
-      this.attributes['example'] = '';
+      this.attributes['answer'] = undefined;
+      this.attributes['example'] = undefined;
       this.emitWithState('AskQuestionAnswer');
     }
   });
