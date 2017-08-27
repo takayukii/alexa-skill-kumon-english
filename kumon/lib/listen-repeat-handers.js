@@ -14,7 +14,7 @@ function createHandlers(state) {
     'Start': function () {
       console.log('LISTEN_REPEAT Start');
       shuffle(LIST_OF_LISTEN_REPEATS);
-      this.attributes['listenRepeats'] = LIST_OF_LISTEN_REPEATS.slice(0, 5);
+      this.attributes['listenRepeats'] = LIST_OF_LISTEN_REPEATS.slice(0, 10);
       this.attributes['count'] = 0;
       this.attributes['repeat'] = '';
       this.attributes['percentage'] = 0;
@@ -23,18 +23,19 @@ function createHandlers(state) {
     },
     'AskListenRepeat': function () {
       console.log('LISTEN_REPEAT AskListenRepeat');
-      let intro = `Let's repeat the following phrase. Phrase ${this.attributes['count'] + 1}. `;
-      if (this.attributes['count'] > 0) {
-        intro = `Good. ${this.attributes['percentage']} percent correct. Let's move on next phrase. Phrase ${this.attributes['count'] + 1}. `;
+      const {listenRepeats, count, repeat, percentage, again} = this.attributes;
+      let intro = `Let's repeat the following phrase. Phrase ${count + 1}. `;
+      if (count > 0) {
+        intro = `Good. ${percentage} percent correct. Let's move on next phrase. Phrase ${count + 1}. `;
       }
-      if (this.attributes['again'] === true) {
-        intro = `Hmm, ${this.attributes['percentage']} percent correct. You said ${this.attributes['repeat']}. One more time. `;
+      if (again === true) {
+        intro = `Hmm, ${percentage} percent correct. You said ${repeat}. One more time. `;
         this.attributes['again'] = false;
       }
-      if (this.attributes['count'] === this.attributes['listenRepeats'].length) {
-        this.emit(':tell', `Good. ${this.attributes['percentage']} percent correct. ` + MSG_THANK_YOU);
+      if (count === listenRepeats.length) {
+        this.emit(':tell', `Good. ${percentage} percent correct. ${MSG_THANK_YOU}`);
       } else {
-        this.emit(':ask', intro + this.attributes['listenRepeats'][this.attributes['count']], MSG_RE_PROMPT);
+        this.emit(':ask', `${intro}${listenRepeats[count]}`, MSG_RE_PROMPT);
       }
     },
     'ListenRepeatIntent': function () {

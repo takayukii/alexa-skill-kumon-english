@@ -24,41 +24,42 @@ function createHandler(state) {
     },
     'AskQuestionAnswer': function () {
       console.log('QUESTION_ANSWER AskQuestionAnswer');
+      const {questionAnswers, count, answer, example, again, againCount} = this.attributes;
       let intro = `Please answer the following question. `;
-      if (this.attributes['count'] > 0) {
+      if (count > 0) {
         intro = `Good. Let's move on next question. `;
       }
-      if (this.attributes['again'] === true) {
-        if (this.attributes['example']) {
-          intro = `Hmm, you said ${this.attributes['answer']} ${this.attributes['example']}. One more time. `;
+      if (again === true) {
+        if (example) {
+          intro = `Hmm, you said ${answer} ${example}. One more time. `;
         } else {
-          intro = `Hmm, you said ${this.attributes['answer']}. One more time. `;
+          intro = `Hmm, you said ${answer}. One more time. `;
         }
       }
-      if (this.attributes['count'] === this.attributes['questionAnswers'].length) {
-        this.emit(':tell', `Good. ` + MSG_THANK_YOU);
+      if (count === questionAnswers.length) {
+        this.emit(':tell', `Good. ${MSG_THANK_YOU}`);
       } else {
-        if (this.attributes['againCount'] > 0 && this.attributes['againCount'] % 2 === 1) {
+        if (againCount > 0 && againCount % 2 === 1) {
           let example = '';
-          if (typeof this.attributes['questionAnswers'][this.attributes['count']].answer === 'string') {
-            if (this.attributes['questionAnswers'][this.attributes['count']].examples && this.attributes['questionAnswers'][this.attributes['count']].examples.length > 0) {
-              example = this.attributes['questionAnswers'][this.attributes['count']].answer.replace('?', this.attributes['questionAnswers'][this.attributes['count']].examples[0]);
+          if (typeof questionAnswers[count].answer === 'string') {
+            if (questionAnswers[count].examples && questionAnswers[count].examples.length > 0) {
+              example = questionAnswers[count].answer.replace('?', questionAnswers[count].examples[0]);
             } else {
-              example = this.attributes['questionAnswers'][this.attributes['count']].answer;
+              example = questionAnswers[count].answer;
             }
           } else {
-            if (this.attributes['questionAnswers'][this.attributes['count']].answer.length > 0) {
-              if (this.attributes['questionAnswers'][this.attributes['count']].examples && this.attributes['questionAnswers'][this.attributes['count']].examples.length > 0) {
-                example = this.attributes['questionAnswers'][this.attributes['count']].answer[0].replace('?', this.attributes['questionAnswers'][this.attributes['count']].examples[0]);
+            if (questionAnswers[count].answer.length > 0) {
+              if (questionAnswers[count].examples && questionAnswers[count].examples.length > 0) {
+                example = questionAnswers[count].answer[0].replace('?', questionAnswers[count].examples[0]);
               } else {
-                example = this.attributes['questionAnswers'][this.attributes['count']].answer[0];
+                example = questionAnswers[count].answer[0];
               }
             }
           }
           intro += `I want you to answer like following. ${example} `;
         }
-        intro += `Question ${this.attributes['count'] + 1}. `;
-        this.emit(':ask', intro + this.attributes['questionAnswers'][this.attributes['count']].question, MSG_RE_PROMPT);
+        intro += `Question ${count + 1}. `;
+        this.emit(':ask', `${intro}${questionAnswers[count].question}`, MSG_RE_PROMPT);
       }
     },
     'QuestionAnswerIntent': function () {
@@ -67,15 +68,18 @@ function createHandler(state) {
       this.attributes['answer'] = this.event.request.intent.slots.QuestionAnswer.value;
       this.attributes['example'] = this.event.request.intent.slots.QuestionAnswerExample.value;
 
+      const {questionAnswers, count, answer, example} = this.attributes;
+
       let similarity = 0;
-      if (typeof this.attributes['questionAnswers'][this.attributes['count']].answer === 'string') {
-        const answer = this.attributes['questionAnswers'][this.attributes['count']].answer.replace('?', '').replace(' .', '').trim();
-        similarity = stringSimilarity.compareTwoStrings(answer, this.attributes['answer']);
-        console.log('QUESTION_ANSWER QuestionAnswerIntent similarity', answer, this.attributes['answer'], similarity);
+      if (typeof questionAnswers[count].answer === 'string') {
+        const expectedAnswer = questionAnswers[count].answer.replace('?', '').replace(' .', '').trim();
+        similarity = stringSimilarity.compareTwoStrings(expectedAnswer, answer);
+        console.log('QUESTION_ANSWER QuestionAnswerIntent similarity', expectedAnswer, answer, similarity);
       } else {
-        for (const answer of this.attributes['questionAnswers'][this.attributes['count']].answer) {
-          const sim = stringSimilarity.compareTwoStrings(answer.replace('?', '').replace(' .', '').trim(), this.attributes['answer']);
-          console.log('QUESTION_ANSWER QuestionAnswerIntent similarity', answer.replace('?', '').replace(' .').trim(), this.attributes['answer'], sim);
+        for (const ans of questionAnswers[count].answer) {
+          const expectedAnswer = ans.replace('?', '').replace(' .', '').trim();
+          const sim = stringSimilarity.compareTwoStrings(expectedAnswer, answer);
+          console.log('QUESTION_ANSWER QuestionAnswerIntent similarity', expectedAnswer, answer, sim);
           if (sim > similarity) {
             similarity = sim;
           }
