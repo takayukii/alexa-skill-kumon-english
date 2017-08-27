@@ -35,7 +35,7 @@ function createHandlers(state) {
       if (count === listenRepeats.length) {
         this.emit(':tell', `Good. ${percentage} percent correct. ${MSG_THANK_YOU}`);
       } else {
-        this.emit(':ask', `${intro}${listenRepeats[count]}`, MSG_RE_PROMPT);
+        this.emit(':ask', `${intro}<break time='1s'/>${listenRepeats[count]}`, MSG_RE_PROMPT);
       }
     },
     'ListenRepeatIntent': function () {
@@ -65,6 +65,7 @@ function createHandlers(state) {
       console.log('LISTEN_REPEAT Unhandled');
       this.attributes['again'] = true;
       this.attributes['repeat'] = 'inaudible';
+      this.attributes['percentage'] = 0;
       this.emitWithState('AskListenRepeat');
     }
   });
