@@ -42,11 +42,21 @@ $ sls help
 $ sls create --help
 ```
 
+Move to kumon directory and install dependencies.
+
+```bash
+# in Vagrant
+$ pwd
+/path/to/kumon
+$ yarn
+```
+
 ## Deploy
 
 Deploy lambda function by `sls deploy`.
 
 ```bash
+# in Vagrant
 $ pwd
 /path/to/kumon
 $ sls deploy
@@ -58,7 +68,7 @@ Create a Skill on developer portal.
 
 [Building Alexa Skills with the Alexa Skills Kit](https://developer.amazon.com/edw/home.html#/skills)
 
-As for `Interaction Model`. Copy the settings from [sppechAssets](./speechAssets). Detailed instructions are available on [Alexa Github](https://github.com/alexa). For example, [howto](https://github.com/alexa/skill-sample-nodejs-howto) repo has good step by step guide.
+As for `Interaction Model`. Copy the settings from [sppechAssets](./kumon/speechAssets). Detailed instructions are available on [Alexa Github](https://github.com/alexa). For example, [howto](https://github.com/alexa/skill-sample-nodejs-howto) repo has good step by step guide.
 
 ## Test
 
