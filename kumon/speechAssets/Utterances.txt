@@ -1,3 +1,4 @@
 PracticeIntent {Practice}
 ListenRepeatIntent {ListenRepeat}
+QuestionAnswerIntent {QuestionAnswer}
 QuestionAnswerIntent {QuestionAnswer} {QuestionAnswerExample}

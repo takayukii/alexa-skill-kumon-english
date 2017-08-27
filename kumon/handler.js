@@ -18,7 +18,7 @@ const handlers = {
   },
   'AskPractice': function () {
     console.log('handlers AskPractice');
-    const message = `Welcome to kumon English practice service. We're offering listen repeat practice and question answer practice. Which practice do you want to try?`;
+    const message = `Welcome to kumon English practice. We're offering listen repeat practice and question answer practice. Which practice do you want to try?`;
     this.emit(':ask', message, MSG_RE_PROMPT);
   },
   'PracticeIntent': function () {

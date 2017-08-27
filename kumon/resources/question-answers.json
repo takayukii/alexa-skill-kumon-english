@@ -1,12 +1,35 @@
 [
   {
+    "question": "Are you cold?",
+    "answer": ["Yes, I am.", "No, I'm not."]
+  },
+  {
+    "question": "Are you sleepy?",
+    "answer": ["Yes, I am.", "No, I'm not."]
+  },
+  {
+    "question": "Are you a nurse?",
+    "answer": ["Yes, I am.", "No, I'm not. I am a ?."],
+    "examples": ["doctor"]
+  },
+  {
+    "question": "Are you a singer?",
+    "answer": ["Yes, I am.", "No, I'm not. I am a ?."],
+    "examples": ["pianist"]
+  },
+  {
+    "question": "Where are you?",
+    "answer": "I'm in the ?.",
+    "examples": ["car", "yard", "kitchen", "bathroom"]
+  },
+  {
     "question": "Which do you want?",
-    "answer": "I want the ?",
+    "answer": "I want the ?.",
     "examples": ["ring", "watch", "shirt", "jacket"]
   },
   {
     "question": "What color do you want?",
-    "answer": "I want ?",
+    "answer": "I want ?.",
     "examples": ["pink", "blue", "green", "white"]
   }
 ]

@@ -19,24 +19,46 @@ function createHandler(state) {
       this.attributes['answer'] = '';
       this.attributes['example'] = '';
       this.attributes['again'] = false;
+      this.attributes['againCount'] = 0;
       this.emitWithState('AskQuestionAnswer');
     },
     'AskQuestionAnswer': function () {
       console.log('QUESTION_ANSWER AskQuestionAnswer');
-      const questionAnswers = this.attributes['questionAnswers'];
       let intro = `Please answer the following question. `;
       if (this.attributes['count'] > 0) {
-        intro = `Good. Your answer is ${this.attributes['example']}. Let's move on next question. `;
+        intro = `Good. Let's move on next question. `;
       }
       if (this.attributes['again'] === true) {
-        intro = `Hmm, you said ${this.attributes['answer']} ${this.attributes['example']}. One more time. `;
-        this.attributes['again'] = false;
+        if (this.attributes['example']) {
+          intro = `Hmm, you said ${this.attributes['answer']} ${this.attributes['example']}. One more time. `;
+        } else {
+          intro = `Hmm, you said ${this.attributes['answer']}. One more time. `;
+        }
       }
       if (this.attributes['count'] === this.attributes['questionAnswers'].length) {
-        this.emit(':tell', `Good. Your answer is ${this.attributes['example']}. ` + MSG_THANK_YOU);
+        this.emit(':tell', `Good. ` + MSG_THANK_YOU);
       } else {
-        intro += `I want you to answer like ${questionAnswers[this.attributes['count']].answer.replace('?', 'blah blah')}. Question ${this.attributes['count'] + 1}. `;
-        this.emit(':ask', intro + questionAnswers[this.attributes['count']].question, MSG_RE_PROMPT);
+        if (this.attributes['againCount'] > 0 && this.attributes['againCount'] % 2 === 1) {
+          let example = '';
+          if (typeof this.attributes['questionAnswers'][this.attributes['count']].answer === 'string') {
+            if (this.attributes['questionAnswers'][this.attributes['count']].examples && this.attributes['questionAnswers'][this.attributes['count']].examples.length > 0) {
+              example = this.attributes['questionAnswers'][this.attributes['count']].answer.replace('?', this.attributes['questionAnswers'][this.attributes['count']].examples[0]);
+            } else {
+              example = this.attributes['questionAnswers'][this.attributes['count']].answer;
+            }
+          } else {
+            if (this.attributes['questionAnswers'][this.attributes['count']].answer.length > 0) {
+              if (this.attributes['questionAnswers'][this.attributes['count']].examples && this.attributes['questionAnswers'][this.attributes['count']].examples.length > 0) {
+                example = this.attributes['questionAnswers'][this.attributes['count']].answer[0].replace('?', this.attributes['questionAnswers'][this.attributes['count']].examples[0]);
+              } else {
+                example = this.attributes['questionAnswers'][this.attributes['count']].answer[0];
+              }
+            }
+          }
+          intro += `I want you to answer like following. ${example} `;
+        }
+        intro += `Question ${this.attributes['count'] + 1}. `;
+        this.emit(':ask', intro + this.attributes['questionAnswers'][this.attributes['count']].question, MSG_RE_PROMPT);
       }
     },
     'QuestionAnswerIntent': function () {
@@ -45,13 +67,29 @@ function createHandler(state) {
       this.attributes['answer'] = this.event.request.intent.slots.QuestionAnswer.value;
       this.attributes['example'] = this.event.request.intent.slots.QuestionAnswerExample.value;
 
-      const similarity = stringSimilarity.compareTwoStrings(this.attributes['questionAnswers'][this.attributes['count']].answer.replace('?', ''), this.attributes['answer']);
+      let similarity = 0;
+      if (typeof this.attributes['questionAnswers'][this.attributes['count']].answer === 'string') {
+        const answer = this.attributes['questionAnswers'][this.attributes['count']].answer.replace('?', '').replace(' .', '').trim();
+        similarity = stringSimilarity.compareTwoStrings(answer, this.attributes['answer']);
+        console.log('QUESTION_ANSWER QuestionAnswerIntent similarity', answer, this.attributes['answer'], similarity);
+      } else {
+        for (const answer of this.attributes['questionAnswers'][this.attributes['count']].answer) {
+          const sim = stringSimilarity.compareTwoStrings(answer.replace('?', '').replace(' .', '').trim(), this.attributes['answer']);
+          console.log('QUESTION_ANSWER QuestionAnswerIntent similarity', answer.replace('?', '').replace(' .').trim(), this.attributes['answer'], sim);
+          if (sim > similarity) {
+            similarity = sim;
+          }
+        }
+      }
       const percentage = Math.floor(similarity * 100);
       if (percentage > 50) {
         this.attributes['count'] += 1;
+        this.attributes['again'] = false;
+        this.attributes['againCount'] = 0;
         this.emitWithState('AskQuestionAnswer');
       } else {
         this.attributes['again'] = true;
+        this.attributes['againCount'] += 1;
         this.emitWithState('AskQuestionAnswer');
       }
     },
@@ -63,6 +101,10 @@ function createHandler(state) {
     },
     'Unhandled': function () {
       console.log('QUESTION_ANSWER Unhandled');
+      this.attributes['again'] = true;
+      this.attributes['againCount'] += 1;
+      this.attributes['answer'] = 'inaudible';
+      this.attributes['example'] = '';
       this.emitWithState('AskQuestionAnswer');
     }
   });
@@ -70,15 +112,37 @@ function createHandler(state) {
 
 function showCustomSlotTypes() {
   console.log('LIST_OF_QUESTION_ANSWERS');
+  const answers = new Set();
   for (const qa of LIST_OF_QUESTION_ANSWERS) {
-    console.log(qa.answer.replace('?', ''));
+    if (typeof qa.answer === 'string') {
+      const answer = qa.answer.replace('?', '').replace(' .', '').trim();
+      if (answer) {
+        answers.add(answer);
+      }
+    } else {
+      for (let answer of qa.answer) {
+        answer = answer.replace('?', '').replace(' .', '').trim();
+        if (answer) {
+          answers.add(answer);
+        }
+      }
+    }
+  }
+  for (const item of answers) {
+    console.log(item);
   }
   console.log();
   console.log('LIST_OF_QUESTION_ANSWER_EXAMPLES');
+  const examples = new Set();
   for (const qa of LIST_OF_QUESTION_ANSWERS) {
-    for (const example of qa.examples) {
-      console.log(example);
+    if (qa.examples) {
+      for (const example of qa.examples) {
+        examples.add(example);
+      }
     }
+  }
+  for (const item of examples) {
+    console.log(item);
   }
   console.log();
 }

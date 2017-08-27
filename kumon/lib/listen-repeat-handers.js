@@ -62,14 +62,17 @@ function createHandlers(state) {
     },
     'Unhandled': function () {
       console.log('LISTEN_REPEAT Unhandled');
+      this.attributes['again'] = true;
+      this.attributes['repeat'] = 'inaudible';
       this.emitWithState('AskListenRepeat');
     }
   });
 }
 
 function showCustomSlotTypes() {
+  const listenRepeatSet = new Set(LIST_OF_LISTEN_REPEATS);
   console.log('LIST_OF_LISTEN_REPEATS');
-  for (const item of LIST_OF_LISTEN_REPEATS) {
+  for (const item of listenRepeatSet) {
     console.log(item);
   }
   console.log();
