@@ -10,11 +10,11 @@
       ]
     },
     {
-      "intent": "ShadowIntent",
+      "intent": "ListenRepeatIntent",
       "slots": [
         {
-          "name": "Shadow",
-          "type": "LIST_OF_SHADOWS"
+          "name": "ListenRepeat",
+          "type": "LIST_OF_LISTEN_REPEATS"
         }
       ]
     },

@@ -1,9 +1,0 @@
-LIST_OF_PRACTICES
-shadowing
-questions and answers
-
-LIST_OF_SHADOWS
-I like milk
-I like juice
-I like coffee
-I like tea

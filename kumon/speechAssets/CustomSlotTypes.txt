@@ -1,0 +1,19 @@
+LIST_OF_LISTEN_REPEATS
+I like milk
+I like juice
+I like coffee
+I like tea
+
+LIST_OF_QUESTION_ANSWERS
+I want the
+I want
+
+LIST_OF_QUESTION_ANSWER_EXAMPLES
+ring
+watch
+shirt
+jacket
+pink
+blue
+green
+white
