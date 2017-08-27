@@ -5,6 +5,78 @@ I want to try listen repeat
 I want to try question answer
 
 LIST_OF_LISTEN_REPEATS
+apple, orange, cookie.
+egg, milk, cheese.
+dog, cat, rabbit.
+bench, tree, flower.
+bag, hat, chair.
+door, bed, clock.
+head, shoulder, eye.
+ear, nose, mouth.
+blue, white, red.
+pink, black, yellow.
+one, two, three.
+four, five, six.
+seven, eight, nine.
+ten, eleven, twelve.
+hot, small, short.
+cold, big, long.
+jump, run, swim.
+wash, eat, drink.
+apple, orange, peach, banana.
+tomato, onion, potato, carrot.
+house, bee, ant, bike.
+plane, cow, flower, dog.
+soup, cheese, pizza, tea.
+knife, fork, rice, chair.
+lion, zebra, pig, bench.
+fox, sheep, bird, rabbit.
+door, piano, sofa, window.
+table, fridge, TV, bed.
+bag, hat, camera, shoes.
+watch, train, bus, horse.
+cat, swing, boat, fish.
+rain, boots, frog, tree.
+long, short, hot, cold.
+big, small, heavy, light.
+eat, drink, wash, cook.
+read, dance, walk, sleep.
+big ball, small ball.
+big cake, small cake.
+big cap, small cap.
+big house, small house.
+long dress, short dress.
+long skirt, short skirt.
+long coat, short coat.
+long socks, short socks.
+my bag, your bag.
+my boots, your boots.
+my cup, your cup.
+my watch, your watch.
+two eggs, two apples.
+three eggs, three apples.
+four eggs, four apples.
+five eggs, five apples.
+six flowers, six trees.
+seven flowers, seven trees.
+eight flowers, eight trees.
+nine flowers, nine trees.
+red bird, red fish.
+blue bird, blue fish.
+green bird, green fish.
+yellow bird, yellow fish.
+I am five.
+I am six.
+I am seven.
+I am eight.
+I am big.
+I am small.
+I am fast.
+I am slow.
+I am hot.
+I am cold.
+I am sick.
+I am fine.
 I am a doctor.
 I am a nurse.
 I am a teacher.
