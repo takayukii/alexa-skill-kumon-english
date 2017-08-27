@@ -1,35 +1,116 @@
 [
   {
     "question": "Are you cold?",
-    "answer": ["Yes, I am.", "No, I'm not."]
+    "answer": [
+      "Yes, I am.",
+      "No, I'm not."
+    ]
   },
   {
     "question": "Are you sleepy?",
-    "answer": ["Yes, I am.", "No, I'm not."]
+    "answer": [
+      "Yes, I am.",
+      "No, I'm not."
+    ]
   },
   {
     "question": "Are you a nurse?",
-    "answer": ["Yes, I am.", "No, I'm not. I am a ?."],
-    "examples": ["doctor"]
+    "answer": [
+      "Yes, I am.",
+      "No, I'm not. I am a ?."
+    ],
+    "examples": [
+      "doctor"
+    ]
   },
   {
     "question": "Are you a singer?",
-    "answer": ["Yes, I am.", "No, I'm not. I am a ?."],
-    "examples": ["pianist"]
+    "answer": [
+      "Yes, I am.",
+      "No, I'm not. I am a ?."
+    ],
+    "examples": [
+      "pianist"
+    ]
   },
   {
     "question": "Where are you?",
     "answer": "I'm in the ?.",
-    "examples": ["car", "yard", "kitchen", "bathroom"]
+    "examples": [
+      "car",
+      "yard",
+      "kitchen",
+      "bathroom"
+    ]
   },
   {
     "question": "Which do you want?",
     "answer": "I want the ?.",
-    "examples": ["ring", "watch", "shirt", "jacket"]
+    "examples": [
+      "ring",
+      "watch",
+      "shirt",
+      "jacket"
+    ]
   },
   {
     "question": "What color do you want?",
     "answer": "I want ?.",
-    "examples": ["pink", "blue", "green", "white"]
+    "examples": [
+      "pink",
+      "blue",
+      "green",
+      "white"
+    ]
+  },
+  {
+    "question": "What animal do you like?",
+    "answer": "I like ?.",
+    "examples": [
+      "pandas",
+      "koalas",
+      "monkeys",
+      "penguins"
+    ]
+  },
+  {
+    "question": "Where do you play?",
+    "answer": "I play in the ?.",
+    "examples": [
+      "yard",
+      "park",
+      "pool",
+      "woods"
+    ]
+  },
+  {
+    "question": "Where do you live?",
+    "answer": "I live in ?.",
+    "examples": [
+      "London",
+      "Moscow",
+      "Bangkok",
+      "Tokyo"
+    ]
+  },
+  {
+    "question": "When do you study?",
+    "answer": "I study before ?.",
+    "examples": [
+      "lunch",
+      "dinner",
+      "school",
+      "work"
+    ]
+  },
+  {
+    "question": "When do you eat dinner?",
+    "answer": "I eat at ?.",
+    "examples": [
+      "six",
+      "seven",
+      "eight",
+      "nine"
+    ]
   }
 ]
