@@ -28,6 +28,9 @@ function createHandlers(state) {
       let intro = `Let's repeat the following phrase. Phrase ${count + 1}. `;
       const praise = percentage > 95 ? '<emphasis level="strong">Awesome!</emphasis>' : 'Good.';
       const evaluation = `${praise} ${percentage} percent correct. `;
+      if (count === listenRepeats.length) {
+        return this.emit(':tell', `${evaluation} ${MSG_THANK_YOU}`);
+      }
       if (count > 0) {
         intro = `${evaluation} Let's move on next phrase. Phrase ${count + 1}. `;
       }
@@ -47,11 +50,7 @@ function createHandlers(state) {
           intro += `One more time. `;
         }
       }
-      if (count === listenRepeats.length) {
-        this.emit(':tell', `${evaluation} ${MSG_THANK_YOU}`);
-      } else {
-        this.emit(':ask', `${intro}<break time='1s'/>${listenRepeats[count]}`, MSG_RE_PROMPT);
-      }
+      this.emit(':ask', `${intro}<break time='1s'/>${listenRepeats[count]}`, MSG_RE_PROMPT);
     },
     'ListenRepeatIntent': function () {
       console.log('LISTEN_REPEAT ListenRepeatIntent');

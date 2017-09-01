@@ -25,6 +25,9 @@ function createHandler(state) {
     'AskQuestionAnswer': function () {
       console.log('QUESTION_ANSWER AskQuestionAnswer');
       const {questionAnswers, count, answer, example, again, againCount} = this.attributes;
+      if (count === questionAnswers.length) {
+        return this.emit(':tell', `Good. ${MSG_THANK_YOU}`);
+      }
       let intro = `Please answer the following question. `;
       if (count > 0) {
         intro = `Good. Let's move on next question. `;
@@ -49,31 +52,27 @@ function createHandler(state) {
           intro += `One more time. `;
         }
       }
-      if (count === questionAnswers.length) {
-        this.emit(':tell', `Good. ${MSG_THANK_YOU}`);
-      } else {
-        if (againCount > 0 && againCount % 2 === 1) {
-          let example = '';
-          if (typeof questionAnswers[count].answer === 'string') {
-            if (questionAnswers[count].examples && questionAnswers[count].examples.length > 0) {
-              example = questionAnswers[count].answer.replace('?', questionAnswers[count].examples[0]);
-            } else {
-              example = questionAnswers[count].answer;
-            }
+      if (againCount > 0 && againCount % 2 === 1) {
+        let example = '';
+        if (typeof questionAnswers[count].answer === 'string') {
+          if (questionAnswers[count].examples && questionAnswers[count].examples.length > 0) {
+            example = questionAnswers[count].answer.replace('?', questionAnswers[count].examples[0]);
           } else {
-            if (questionAnswers[count].answer.length > 0) {
-              if (questionAnswers[count].examples && questionAnswers[count].examples.length > 0) {
-                example = questionAnswers[count].answer[0].replace('?', questionAnswers[count].examples[0]);
-              } else {
-                example = questionAnswers[count].answer[0];
-              }
+            example = questionAnswers[count].answer;
+          }
+        } else {
+          if (questionAnswers[count].answer.length > 0) {
+            if (questionAnswers[count].examples && questionAnswers[count].examples.length > 0) {
+              example = questionAnswers[count].answer[0].replace('?', questionAnswers[count].examples[0]);
+            } else {
+              example = questionAnswers[count].answer[0];
             }
           }
-          intro += `I want you to answer like ${example} `;
         }
-        intro += `Question ${count + 1}. <break time='1s'/>`;
-        this.emit(':ask', `${intro}${questionAnswers[count].question}`, MSG_RE_PROMPT);
+        intro += `I want you to answer like ${example} `;
       }
+      intro += `Question ${count + 1}. <break time='1s'/>`;
+      this.emit(':ask', `${intro}${questionAnswers[count].question}`, MSG_RE_PROMPT);
     },
     'QuestionAnswerIntent': function () {
       console.log('QUESTION_ANSWER QuestionAnswerIntent');
