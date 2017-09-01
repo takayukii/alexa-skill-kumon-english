@@ -28,28 +28,28 @@ function createHandler(state) {
       if (count === questionAnswers.length) {
         return this.emit(':tell', `Good. ${MSG_THANK_YOU}`);
       }
-      let intro = `Please answer the following question. `;
+      let lead = `Please answer the following question. `;
       if (count > 0) {
-        intro = `Good. Let's move on next question. `;
+        lead = `Great. Let's move on next question. `;
       }
       if (again === true) {
         if (answer) {
           if (example) {
-            intro = `Hmm, you said ${answer} and ${example}. `;
+            lead = `Good. You said ${answer} and ${example}. `;
           } else {
-            intro = `Hmm, you said ${answer}. `;
+            lead = `Good. You said ${answer}. `;
           }
         } else {
-          intro = `Hmm, I couldn't get what you said. `;
+          lead = `You're doing great. `;
         }
-        if (againCount === 5) {
+        if (againCount === 3) {
           const remains = LIST_OF_QUESTION_ANSWERS.slice(5);
           const idx = Math.floor(Math.random() * (remains.length - 1));
           questionAnswers[count] = remains[idx];
           this.attributes['againCount'] = 0;
-          intro += `Try another one. `;
+          lead += `Let's go next one! `;
         } else {
-          intro += `One more time. `;
+          lead += `One more time? `;
         }
       }
       if (againCount > 0 && againCount % 2 === 1) {
@@ -69,10 +69,10 @@ function createHandler(state) {
             }
           }
         }
-        intro += `I want you to answer like ${example} `;
+        lead += `I want you to answer like <prosody volume="x-loud" rate="slow">${example}</prosody> `;
       }
-      intro += `Question ${count + 1}. <break time='1s'/>`;
-      this.emit(':ask', `${intro}${questionAnswers[count].question}`, MSG_RE_PROMPT);
+      lead += `Question ${count + 1}. <break time='1s'/>`;
+      this.emit(':ask', `${lead}<prosody volume="x-loud" rate="slow">${questionAnswers[count].question}</prosody>`, MSG_RE_PROMPT);
     },
     'QuestionAnswerIntent': function () {
       console.log('QUESTION_ANSWER QuestionAnswerIntent');
