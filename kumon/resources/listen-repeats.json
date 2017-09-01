@@ -1,211 +1,2192 @@
 [
-  "apple, orange, cookie.",
-  "egg, milk, cheese.",
-  "dog, cat, rabbit.",
-  "bench, tree, flower.",
-  "bag, hat, chair.",
-  "door, bed, clock.",
-  "head, shoulder, eye.",
-  "ear, nose, mouth.",
-  "blue, white, red.",
-  "pink, black, yellow.",
-  "one, two, three.",
-  "four, five, six.",
-  "seven, eight, nine.",
-  "ten, eleven, twelve.",
-  "hot, small, short.",
-  "cold, big, long.",
-  "jump, run, swim.",
-  "wash, eat, drink.",
-  "apple, orange, peach, banana.",
-  "tomato, onion, potato, carrot.",
-  "house, bee, ant, bike.",
-  "plane, cow, flower, dog.",
-  "soup, cheese, pizza, tea.",
-  "knife, fork, rice, chair.",
-  "lion, zebra, pig, bench.",
-  "fox, sheep, bird, rabbit.",
-  "door, piano, sofa, window.",
-  "table, fridge, TV, bed.",
-  "bag, hat, camera, shoes.",
-  "watch, train, bus, horse.",
-  "cat, swing, boat, fish.",
-  "rain, boots, frog, tree.",
-  "long, short, hot, cold.",
-  "big, small, heavy, light.",
-  "eat, drink, wash, cook.",
-  "read, dance, walk, sleep.",
-  "big ball, small ball.",
-  "big cake, small cake.",
-  "big cap, small cap.",
-  "big house, small house.",
-  "long dress, short dress.",
-  "long skirt, short skirt.",
-  "long coat, short coat.",
-  "long socks, short socks.",
-  "my bag, your bag.",
-  "my boots, your boots.",
-  "my cup, your cup.",
-  "my watch, your watch.",
-  "two eggs, two apples.",
-  "three eggs, three apples.",
-  "four eggs, four apples.",
-  "five eggs, five apples.",
-  "six flowers, six trees.",
-  "seven flowers, seven trees.",
-  "eight flowers, eight trees.",
-  "nine flowers, nine trees.",
-  "red bird, red fish.",
-  "blue bird, blue fish.",
-  "green bird, green fish.",
-  "yellow bird, yellow fish.",
-  "I am five.",
-  "I am six.",
-  "I am seven.",
-  "I am eight.",
-  "I am big.",
-  "I am small.",
-  "I am fast.",
-  "I am slow.",
-  "I am hot.",
-  "I am cold.",
-  "I am sick.",
-  "I am fine.",
-  "I am a doctor.",
-  "I am a nurse.",
-  "I am a teacher.",
-  "I am a student.",
-  "I am a cook.",
-  "I am a pilot.",
-  "I am a baker.",
-  "I am a pianist.",
-  "I'm on the bed.",
-  "I'm on the sofa.",
-  "I'm on the chair.",
-  "I'm on the bridge.",
-  "I'm under the tree.",
-  "I'm under the bridge.",
-  "I'm under the table.",
-  "I'm under the slide.",
-  "Are you cold? Yes, I am.",
-  "Are you cold? No, I'm not.",
-  "Are you sleepy? Yes, I am.",
-  "Are you sleepy? No, I'm not.",
-  "Are you a nurse? Yes, I am.",
-  "Are you a nurse? No, I'm not. I am a doctor.",
-  "Are you a singer? Yes, I am.",
-  "Are you a singer? No, I'm not. I am a pianist.",
-  "Where are you?",
-  "I'm in the car.",
-  "I'm in the yard.",
-  "I'm in the kitchen.",
-  "I'm in the bathroom.",
-  "Wash the carrot.",
-  "Wash the potato.",
-  "Wash the lemon.",
-  "Wash the cabbage.",
-  "Cut the carrot.",
-  "Cut the potato.",
-  "Cut the lemon.",
-  "Cut the cabbage.",
-  "Open the box.",
-  "Open the door.",
-  "Open the window.",
-  "Open the fridge.",
-  "Close the box.",
-  "Close the door.",
-  "Close the window.",
-  "Close the fridge.",
-  "I like milk.",
-  "I like juice.",
-  "I like coffee.",
-  "I like tea.",
-  "I eat curry.",
-  "I eat pizza.",
-  "I eat steak.",
-  "I eat pasta.",
-  "I cook curry.",
-  "I cook pizza.",
-  "I cook steak.",
-  "I cook pasta.",
-  "I play soccer.",
-  "I play tennis.",
-  "I play baseball.",
-  "I play ping-pong.",
-  "I watch soccer.",
-  "I watch tennis.",
-  "I watch baseball.",
-  "I watch ping-pong.",
-  "I teach English.",
-  "I teach math.",
-  "I teach science.",
-  "I teach Japanese.",
-  "I study English.",
-  "I study math.",
-  "I study science.",
-  "I study Japanese.",
-  "I want a car.",
-  "I want a truck.",
-  "I want a bus.",
-  "I want a train.",
-  "I drive a car.",
-  "I drive a truck.",
-  "I drive a bus.",
-  "I drive a train.",
-  "I eat big apples.",
-  "I eat big bananas.",
-  "I eat big carrots.",
-  "I eat big nuts.",
-  "I eat small apples.",
-  "I eat small bananas.",
-  "I eat small carrots.",
-  "I eat small nuts.",
-  "I have new pants.",
-  "I have new shoes.",
-  "I have new gloves.",
-  "I have new socks.",
-  "I have cute pants.",
-  "I have cute shoes.",
-  "I have cute gloves.",
-  "I have cute socks.",
-  "Do you drive a bus? Yes, I do.",
-  "Do you drive a bus? No, I don't.",
-  "Do you drive a taxi? Yes, I do.",
-  "Do you drive a taxi? No, I don't.",
-  "Do you play soccer? Yes, I do.",
-  "Do you play soccer? No, I don't. I play rugby.",
-  "Do you play tennis? Yes, I do.",
-  "Do you play tennis? No, I don't. I play golf.",
-  "I read in the yard.",
-  "I read in the park.",
-  "I read in the car.",
-  "I sing in the kitchen.",
-  "I sing in the yard.",
-  "I sing in the park.",
-  "I sing in the car.",
-  "I sing in the kitchen.",
-  "Where do you play? I play in the yard.",
-  "Where do you play? I play in the park.",
-  "Where do you play? I play in the pool.",
-  "Where do you play? I play in the woods.",
-  "Where do you live? I live in London.",
-  "Where do you live? I live in Moscow.",
-  "Where do you live? I live in Bangkok.",
-  "Where do you live? I live in Tokyo.",
-  "I swim after lunch.",
-  "I swim after dinner.",
-  "I swim after school.",
-  "I swim after Kumon.",
-  "I run after lunch.",
-  "I run after dinner.",
-  "I run after school.",
-  "I run after Kumon.",
-  "When do you study? I study before lunch.",
-  "When do you study? I study before dinner.",
-  "When do you study? I study before school.",
-  "When do you study? I study before work.",
-  "When do you eat dinner? I eat at six.",
-  "When do you eat dinner? I eat at seven.",
-  "When do you eat dinner? I eat at eight.",
-  "When do you eat dinner? I eat at nine."
+  {
+    "phrases": [
+      {
+        "phrase": "apple"
+      },
+      {
+        "phrase": "orange"
+      },
+      {
+        "phrase": "cookie"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "egg"
+      },
+      {
+        "phrase": "milk"
+      },
+      {
+        "phrase": "cheese"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "dog"
+      },
+      {
+        "phrase": "cat"
+      },
+      {
+        "phrase": "rabbit"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "bench"
+      },
+      {
+        "phrase": "tree"
+      },
+      {
+        "phrase": "flower"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "bag"
+      },
+      {
+        "phrase": "hat"
+      },
+      {
+        "phrase": "chair"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "door"
+      },
+      {
+        "phrase": "bed"
+      },
+      {
+        "phrase": "clock"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "head"
+      },
+      {
+        "phrase": "shoulder"
+      },
+      {
+        "phrase": "eye"
+      },
+      {
+        "phrase": "ear"
+      },
+      {
+        "phrase": "nose"
+      },
+      {
+        "phrase": "mouth"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "blue"
+      },
+      {
+        "phrase": "white"
+      },
+      {
+        "phrase": "red"
+      },
+      {
+        "phrase": "pink"
+      },
+      {
+        "phrase": "black"
+      },
+      {
+        "phrase": "yellow"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "one"
+      },
+      {
+        "phrase": "two"
+      },
+      {
+        "phrase": "three"
+      },
+      {
+        "phrase": "four"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "five"
+      },
+      {
+        "phrase": "six"
+      },
+      {
+        "phrase": "seven"
+      },
+      {
+        "phrase": "eight"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "nine"
+      },
+      {
+        "phrase": "ten"
+      },
+      {
+        "phrase": "eleven"
+      },
+      {
+        "phrase": "twelve"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "hot"
+      },
+      {
+        "phrase": "cold"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "big"
+      },
+      {
+        "phrase": "small"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "long"
+      },
+      {
+        "phrase": "short"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "jump"
+      },
+      {
+        "phrase": "run"
+      },
+      {
+        "phrase": "swim"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "wash"
+      },
+      {
+        "phrase": "eat"
+      },
+      {
+        "phrase": "drink"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "apple"
+      },
+      {
+        "phrase": "orange"
+      },
+      {
+        "phrase": "peach"
+      },
+      {
+        "phrase": "banana"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "tomato"
+      },
+      {
+        "phrase": "onion"
+      },
+      {
+        "phrase": "potato"
+      },
+      {
+        "phrase": "carrot"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "house"
+      },
+      {
+        "phrase": "bee"
+      },
+      {
+        "phrase": "ant"
+      },
+      {
+        "phrase": "bike"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "plane"
+      },
+      {
+        "phrase": "cow"
+      },
+      {
+        "phrase": "flower"
+      },
+      {
+        "phrase": "dog"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "soup"
+      },
+      {
+        "phrase": "cheese"
+      },
+      {
+        "phrase": "pizza"
+      },
+      {
+        "phrase": "tea"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "knife"
+      },
+      {
+        "phrase": "fork"
+      },
+      {
+        "phrase": "rice"
+      },
+      {
+        "phrase": "chair"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "lion"
+      },
+      {
+        "phrase": "zebra"
+      },
+      {
+        "phrase": "pig"
+      },
+      {
+        "phrase": "bench"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "fox"
+      },
+      {
+        "phrase": "sheep"
+      },
+      {
+        "phrase": "bird"
+      },
+      {
+        "phrase": "rabbit"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "door"
+      },
+      {
+        "phrase": "piano"
+      },
+      {
+        "phrase": "sofa"
+      },
+      {
+        "phrase": "window"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "table"
+      },
+      {
+        "phrase": "fridge"
+      },
+      {
+        "phrase": "TV"
+      },
+      {
+        "phrase": "bed"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "bag"
+      },
+      {
+        "phrase": "hat"
+      },
+      {
+        "phrase": "camera"
+      },
+      {
+        "phrase": "shoes"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "watch"
+      },
+      {
+        "phrase": "train"
+      },
+      {
+        "phrase": "bus"
+      },
+      {
+        "phrase": "horse"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "cat"
+      },
+      {
+        "phrase": "swing"
+      },
+      {
+        "phrase": "boat"
+      },
+      {
+        "phrase": "fish"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "rain"
+      },
+      {
+        "phrase": "boots"
+      },
+      {
+        "phrase": "frog"
+      },
+      {
+        "phrase": "tree"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "long"
+      },
+      {
+        "phrase": "short"
+      },
+      {
+        "phrase": "hot"
+      },
+      {
+        "phrase": "cold"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "big"
+      },
+      {
+        "phrase": "small"
+      },
+      {
+        "phrase": "heavy"
+      },
+      {
+        "phrase": "light"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "eat"
+      },
+      {
+        "phrase": "drink"
+      },
+      {
+        "phrase": "wash"
+      },
+      {
+        "phrase": "cook"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "read"
+      },
+      {
+        "phrase": "dance"
+      },
+      {
+        "phrase": "walk"
+      },
+      {
+        "phrase": "sleep"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "big ball"
+      },
+      {
+        "phrase": "small ball"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "big cake"
+      },
+      {
+        "phrase": "small cake"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "big cap"
+      },
+      {
+        "phrase": "small cap"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "big house"
+      },
+      {
+        "phrase": "small house"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "long dress"
+      },
+      {
+        "phrase": "short dress"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "long skirt"
+      },
+      {
+        "phrase": "short skirt"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "long coat"
+      },
+      {
+        "phrase": "short coat"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "long socks"
+      },
+      {
+        "phrase": "short socks"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "my bag"
+      },
+      {
+        "phrase": "your bag"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "my boots"
+      },
+      {
+        "phrase": "your boots"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "my cup"
+      },
+      {
+        "phrase": "your cup"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "my watch"
+      },
+      {
+        "phrase": "your watch"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "two eggs"
+      },
+      {
+        "phrase": "two apples"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "three eggs"
+      },
+      {
+        "phrase": "three apples"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "four eggs"
+      },
+      {
+        "phrase": "four apples"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "five eggs"
+      },
+      {
+        "phrase": "five apples"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "six flowers"
+      },
+      {
+        "phrase": "six trees"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "seven flowers"
+      },
+      {
+        "phrase": "seven trees"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "eight flowers"
+      },
+      {
+        "phrase": "eight trees"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "nine flowers"
+      },
+      {
+        "phrase": "nine trees"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "red bird"
+      },
+      {
+        "phrase": "red fish"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "blue bird"
+      },
+      {
+        "phrase": "blue fish"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "green bird"
+      },
+      {
+        "phrase": "green fish"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "yellow bird"
+      },
+      {
+        "phrase": "yellow fish"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I am five."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I am six."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I am seven."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I am eight."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I am big."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I am small."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I am fast."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I am slow."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I am hot."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I am cold."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I am sick."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I am fine."
+      }
+    ]
+  },
+  {
+    "scene": "B-1 Skit. Jungle Exploration.",
+    "phrases": [
+      {
+        "person": "girl",
+        "phrase": "Big trees!"
+      },
+      {
+        "person": "boy",
+        "phrase": "Red flowers!"
+      },
+      {
+        "person": "girl",
+        "phrase": "I am hot."
+      },
+      {
+        "person": "boy",
+        "phrase": "I am hungry."
+      },
+      {
+        "person": "girl",
+        "phrase": "Four bananas!"
+      },
+      {
+        "person": "boy",
+        "phrase": "Four bananas?"
+      },
+      {
+        "person": "girl",
+        "phrase": "Two bananas!"
+      },
+      {
+        "person": "boy",
+        "phrase": "Two monkeys!"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I am a doctor."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I am a nurse."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I am a teacher."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I am a student."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I am a cook."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I am a pilot."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I am a baker."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I am a pianist."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I'm on the bed."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I'm on the sofa."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I'm on the chair."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I'm on the bridge."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I'm under the tree."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I'm under the bridge."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I'm under the table."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I'm under the slide."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Are you cold?"
+      },
+      {
+        "phrase": "Yes, I am."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Are you cold?"
+      },
+      {
+        "phrase": "No, I'm not."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Are you sleepy?"
+      },
+      {
+        "phrase": "Yes, I am."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Are you sleepy?"
+      },
+      {
+        "phrase": "No, I'm not."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Are you a nurse?"
+      },
+      {
+        "phrase": "Yes, I am."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Are you a nurse?"
+      },
+      {
+        "phrase": "No, I'm not. I am a doctor."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Are you a singer?"
+      },
+      {
+        "phrase": "Yes, I am."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Are you a singer?"
+      },
+      {
+        "phrase": "No, I'm not. I am a pianist."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Where are you?"
+      },
+      {
+        "phrase": "I'm in the car."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Where are you?"
+      },
+      {
+        "phrase": "I'm in the yard."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Where are you?"
+      },
+      {
+        "phrase": "I'm in the kitchen."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Where are you?"
+      },
+      {
+        "phrase": "I'm in the bathroom."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Wash the carrot."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Wash the potato."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Wash the lemon."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Wash the cabbage."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Cut the carrot."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Cut the potato."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Cut the lemon."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Cut the cabbage."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Open the box."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Open the door."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Open the window."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Open the fridge."
+      }
+    ]
+  },
+  {
+    "scene": "B-2 Skit. Dog's friend.",
+    "phrases": [
+      {
+        "person": "dog",
+        "phrase": "Where are you?"
+      },
+      {
+        "person": "cat",
+        "phrase": "I'm in the yard."
+      },
+      {
+        "person": "dog",
+        "phrase": "Where are you?"
+      },
+      {
+        "person": "cat",
+        "phrase": "I'm under the tree."
+      },
+      {
+        "person": "dog",
+        "phrase": "Where are you?"
+      },
+      {
+        "person": "cat",
+        "phrase": "I'm in the box!"
+      },
+      {
+        "person": "dog",
+        "phrase": "Are you OK?"
+      },
+      {
+        "person": "cat",
+        "phrase": "No. Open the box."
+      },
+      {
+        "person": "dog",
+        "phrase": "OK."
+      },
+      {
+        "person": "cat",
+        "phrase": "Thank you!"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Close the box."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Close the door."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Close the window."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Close the fridge."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I like milk."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I like juice."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I like coffee."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I like tea."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I eat curry."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I eat pizza."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I eat steak."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I eat pasta."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I cook curry."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I cook pizza."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I cook steak."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I cook pasta."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I play soccer."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I play tennis."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I play baseball."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I play ping-pong."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I watch soccer."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I watch tennis."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I watch baseball."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I watch ping-pong."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I teach English."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I teach math."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I teach science."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I teach Japanese."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I study English."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I study math."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I study science."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I study Japanese."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I want a car."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I want a truck."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I want a bus."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I want a train."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I drive a car."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I drive a truck."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I drive a bus."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I drive a train."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I eat big apples."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I eat big bananas."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I eat big carrots."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I eat big nuts."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I eat small apples."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I eat small bananas."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I eat small carrots."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I eat small nuts."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I have new pants."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I have new shoes."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I have new gloves."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I have new socks."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I have cute pants."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I have cute shoes."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I have cute gloves."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I have cute socks."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Do you drive a bus?"
+      },
+      {
+        "phrase": "Yes, I do."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Do you drive a bus?"
+      },
+      {
+        "phrase": "No, I don't."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Do you drive a taxi?"
+      },
+      {
+        "phrase": "Yes, I do."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Do you drive a taxi?"
+      },
+      {
+        "phrase": "No, I don't."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Do you play soccer?"
+      },
+      {
+        "phrase": "Yes, I do."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Do you play soccer?"
+      },
+      {
+        "phrase": "No, I don't. I play rugby."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Do you play tennis?"
+      },
+      {
+        "phrase": "Yes, I do."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Do you play tennis?"
+      },
+      {
+        "phrase": "No, I don't. I play golf."
+      }
+    ]
+  },
+  {
+    "scene": "C-1 Skit. Sharing nuts.",
+    "phrases": [
+      {
+        "person": "squirrel",
+        "phrase": "I have ten nuts."
+      },
+      {
+        "person": "squirrel",
+        "phrase": "Do you eat nuts?"
+      },
+      {
+        "person": "rabbit",
+        "phrase": "No, I don't."
+      },
+      {
+        "person": "rabbit",
+        "phrase": "I like big carrots."
+      },
+      {
+        "person": "squirrel",
+        "phrase": "Do you eat nuts?"
+      },
+      {
+        "person": "turtle",
+        "phrase": "No, I don't."
+      },
+      {
+        "person": "turtle",
+        "phrase": "I like small flowers."
+      },
+      {
+        "person": "squirrel",
+        "phrase": "Do you eat nuts?"
+      },
+      {
+        "person": "bird",
+        "phrase": "Yes, I do."
+      },
+      {
+        "person": "bird",
+        "phrase": "Yummy!"
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Which do you want?"
+      },
+      {
+        "phrase": "I want the ring."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Which do you want?"
+      },
+      {
+        "phrase": "I want the watch."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Which do you want?"
+      },
+      {
+        "phrase": "I want the shirt."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Which do you want?"
+      },
+      {
+        "phrase": "I want the jacket."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "What color do you want?"
+      },
+      {
+        "phrase": "I want pink."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "What color do you want?"
+      },
+      {
+        "phrase": "I want blue."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "What color do you want?"
+      },
+      {
+        "phrase": "I want green."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "What color do you want?"
+      },
+      {
+        "phrase": "I want white."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "What animal do you want?"
+      },
+      {
+        "phrase": "I want pandas."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "What animal do you want?"
+      },
+      {
+        "phrase": "I want koalas."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "What animal do you want?"
+      },
+      {
+        "phrase": "I want monkeys."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "What animal do you want?"
+      },
+      {
+        "phrase": "I want penguins."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I read in the yard."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I read in the park."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I read in the car."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I sing in the kitchen."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I sing in the yard."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I sing in the park."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I sing in the car."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I sing in the kitchen."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Where do you play?"
+      },
+      {
+        "phrase": "I play in the yard."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Where do you play?"
+      },
+      {
+        "phrase": "I play in the park."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Where do you play?"
+      },
+      {
+        "phrase": "I play in the pool."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Where do you play?"
+      },
+      {
+        "phrase": "I play in the woods."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Where do you live?"
+      },
+      {
+        "phrase": "I live in London."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Where do you live?"
+      },
+      {
+        "phrase": "I live in Moscow."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Where do you live?"
+      },
+      {
+        "phrase": "I live in Bangkok."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "Where do you live?"
+      },
+      {
+        "phrase": "I live in Tokyo."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I swim after lunch."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I swim after dinner."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I swim after school."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I swim after Kumon."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I run after lunch."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I run after dinner."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I run after school."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "I run after Kumon."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "When do you study?"
+      },
+      {
+        "phrase": "I study before lunch."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "When do you study?"
+      },
+      {
+        "phrase": "I study before dinner."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "When do you study?"
+      },
+      {
+        "phrase": "I study before school."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "When do you study?"
+      },
+      {
+        "phrase": "I study before work."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "When do you eat dinner?"
+      },
+      {
+        "phrase": "I eat at six."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "When do you eat dinner?"
+      },
+      {
+        "phrase": "I eat at seven."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "When do you eat dinner?"
+      },
+      {
+        "phrase": "I eat at eight."
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "phrase": "When do you eat dinner?"
+      },
+      {
+        "phrase": "I eat at nine."
+      }
+    ]
+  },
+  {
+    "scene": "C-2 Skit. City mouse and country mouse.",
+    "phrases": [
+      {
+        "person": "country mouse",
+        "phrase": "Do you live here?"
+      },
+      {
+        "person": "city mouse",
+        "phrase": "Yes. Come in!"
+      },
+      {
+        "person": "city mouse",
+        "phrase": "Are you hungry?"
+      },
+      {
+        "person": "country mouse",
+        "phrase": "Yes, I am."
+      },
+      {
+        "person": "city mouse",
+        "phrase": "Let's eat dinner!"
+      },
+      {
+        "person": "city mouse",
+        "phrase": "Which do you want?"
+      },
+      {
+        "person": "country mouse",
+        "phrase": "I want the cheese."
+      },
+      {
+        "person": "city mouse",
+        "phrase": "What juice do you want?"
+      },
+      {
+        "person": "country mouse",
+        "phrase": "I want apple juice."
+      },
+      {
+        "person": "city mouse",
+        "phrase": "Run!"
+      }
+    ]
+  }
 ]

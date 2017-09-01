@@ -5,66 +5,157 @@ I want to try listen repeat
 I want to try question answer
 
 LIST_OF_LISTEN_REPEATS
-apple, orange, cookie.
-egg, milk, cheese.
-dog, cat, rabbit.
-bench, tree, flower.
-bag, hat, chair.
-door, bed, clock.
-head, shoulder, eye.
-ear, nose, mouth.
-blue, white, red.
-pink, black, yellow.
-one, two, three.
-four, five, six.
-seven, eight, nine.
-ten, eleven, twelve.
-hot, small, short.
-cold, big, long.
-jump, run, swim.
-wash, eat, drink.
-apple, orange, peach, banana.
-tomato, onion, potato, carrot.
-house, bee, ant, bike.
-plane, cow, flower, dog.
-soup, cheese, pizza, tea.
-knife, fork, rice, chair.
-lion, zebra, pig, bench.
-fox, sheep, bird, rabbit.
-door, piano, sofa, window.
-table, fridge, TV, bed.
-bag, hat, camera, shoes.
-watch, train, bus, horse.
-cat, swing, boat, fish.
-rain, boots, frog, tree.
-long, short, hot, cold.
-big, small, heavy, light.
-eat, drink, wash, cook.
-read, dance, walk, sleep.
-big ball, small ball.
-big cake, small cake.
-big cap, small cap.
-big house, small house.
-long dress, short dress.
-long skirt, short skirt.
-long coat, short coat.
-long socks, short socks.
-my bag, your bag.
-my boots, your boots.
-my cup, your cup.
-my watch, your watch.
-two eggs, two apples.
-three eggs, three apples.
-four eggs, four apples.
-five eggs, five apples.
-six flowers, six trees.
-seven flowers, seven trees.
-eight flowers, eight trees.
-nine flowers, nine trees.
-red bird, red fish.
-blue bird, blue fish.
-green bird, green fish.
-yellow bird, yellow fish.
+apple
+orange
+cookie
+egg
+milk
+cheese
+dog
+cat
+rabbit
+bench
+tree
+flower
+bag
+hat
+chair
+door
+bed
+clock
+head
+shoulder
+eye
+ear
+nose
+mouth
+blue
+white
+red
+pink
+black
+yellow
+one
+two
+three
+four
+five
+six
+seven
+eight
+nine
+ten
+eleven
+twelve
+hot
+cold
+big
+small
+long
+short
+jump
+run
+swim
+wash
+eat
+drink
+peach
+banana
+tomato
+onion
+potato
+carrot
+house
+bee
+ant
+bike
+plane
+cow
+soup
+pizza
+tea
+knife
+fork
+rice
+lion
+zebra
+pig
+fox
+sheep
+bird
+piano
+sofa
+window
+table
+fridge
+TV
+camera
+shoes
+watch
+train
+bus
+horse
+swing
+boat
+fish
+rain
+boots
+frog
+heavy
+light
+cook
+read
+dance
+walk
+sleep
+big ball
+small ball
+big cake
+small cake
+big cap
+small cap
+big house
+small house
+long dress
+short dress
+long skirt
+short skirt
+long coat
+short coat
+long socks
+short socks
+my bag
+your bag
+my boots
+your boots
+my cup
+your cup
+my watch
+your watch
+two eggs
+two apples
+three eggs
+three apples
+four eggs
+four apples
+five eggs
+five apples
+six flowers
+six trees
+seven flowers
+seven trees
+eight flowers
+eight trees
+nine flowers
+nine trees
+red bird
+red fish
+blue bird
+blue fish
+green bird
+green fish
+yellow bird
+yellow fish
 I am five.
 I am six.
 I am seven.
@@ -77,6 +168,13 @@ I am hot.
 I am cold.
 I am sick.
 I am fine.
+Big trees!
+Red flowers!
+I am hungry.
+Four bananas!
+Four bananas?
+Two bananas!
+Two monkeys!
 I am a doctor.
 I am a nurse.
 I am a teacher.
@@ -93,14 +191,14 @@ I'm under the tree.
 I'm under the bridge.
 I'm under the table.
 I'm under the slide.
-Are you cold? Yes, I am.
-Are you cold? No, I'm not.
-Are you sleepy? Yes, I am.
-Are you sleepy? No, I'm not.
-Are you a nurse? Yes, I am.
-Are you a nurse? No, I'm not. I am a doctor.
-Are you a singer? Yes, I am.
-Are you a singer? No, I'm not. I am a pianist.
+Are you cold?
+Yes, I am.
+No, I'm not.
+Are you sleepy?
+Are you a nurse?
+No, I'm not. I am a doctor.
+Are you a singer?
+No, I'm not. I am a pianist.
 Where are you?
 I'm in the car.
 I'm in the yard.
@@ -118,6 +216,11 @@ Open the box.
 Open the door.
 Open the window.
 Open the fridge.
+I'm in the box!
+Are you OK?
+No. Open the box.
+OK.
+Thank you!
 Close the box.
 Close the door.
 Close the window.
@@ -174,14 +277,34 @@ I have cute pants.
 I have cute shoes.
 I have cute gloves.
 I have cute socks.
-Do you drive a bus? Yes, I do.
-Do you drive a bus? No, I don't.
-Do you drive a taxi? Yes, I do.
-Do you drive a taxi? No, I don't.
-Do you play soccer? Yes, I do.
-Do you play soccer? No, I don't. I play rugby.
-Do you play tennis? Yes, I do.
-Do you play tennis? No, I don't. I play golf.
+Do you drive a bus?
+Yes, I do.
+No, I don't.
+Do you drive a taxi?
+Do you play soccer?
+No, I don't. I play rugby.
+Do you play tennis?
+No, I don't. I play golf.
+I have ten nuts.
+Do you eat nuts?
+I like big carrots.
+I like small flowers.
+Yummy!
+Which do you want?
+I want the ring.
+I want the watch.
+I want the shirt.
+I want the jacket.
+What color do you want?
+I want pink.
+I want blue.
+I want green.
+I want white.
+What animal do you want?
+I want pandas.
+I want koalas.
+I want monkeys.
+I want penguins.
 I read in the yard.
 I read in the park.
 I read in the car.
@@ -189,14 +312,16 @@ I sing in the kitchen.
 I sing in the yard.
 I sing in the park.
 I sing in the car.
-Where do you play? I play in the yard.
-Where do you play? I play in the park.
-Where do you play? I play in the pool.
-Where do you play? I play in the woods.
-Where do you live? I live in London.
-Where do you live? I live in Moscow.
-Where do you live? I live in Bangkok.
-Where do you live? I live in Tokyo.
+Where do you play?
+I play in the yard.
+I play in the park.
+I play in the pool.
+I play in the woods.
+Where do you live?
+I live in London.
+I live in Moscow.
+I live in Bangkok.
+I live in Tokyo.
 I swim after lunch.
 I swim after dinner.
 I swim after school.
@@ -205,14 +330,24 @@ I run after lunch.
 I run after dinner.
 I run after school.
 I run after Kumon.
-When do you study? I study before lunch.
-When do you study? I study before dinner.
-When do you study? I study before school.
-When do you study? I study before work.
-When do you eat dinner? I eat at six.
-When do you eat dinner? I eat at seven.
-When do you eat dinner? I eat at eight.
-When do you eat dinner? I eat at nine.
+When do you study?
+I study before lunch.
+I study before dinner.
+I study before school.
+I study before work.
+When do you eat dinner?
+I eat at six.
+I eat at seven.
+I eat at eight.
+I eat at nine.
+Do you live here?
+Yes. Come in!
+Are you hungry?
+Let's eat dinner!
+I want the cheese.
+What juice do you want?
+I want apple juice.
+Run!
 
 LIST_OF_QUESTION_ANSWERS
 Yes, I am.
@@ -261,4 +396,3 @@ six
 seven
 eight
 nine
-
