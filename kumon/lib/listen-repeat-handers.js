@@ -7,7 +7,7 @@ const {shuffle} = require('./utils');
 const MSG_RE_PROMPT = 'Please say that again?';
 const MSG_THANK_YOU = 'Thank you very much. See you at next time!';
 
-const LIST_OF_SECTIONS = require('../resources/listen-repeats.json');
+const LIST_OF_DIALOGUES = require('../resources/listen-repeats.json');
 
 function createHandlers(state) {
   return Alexa.CreateStateHandler(state, {
@@ -15,8 +15,8 @@ function createHandlers(state) {
       console.log('LISTEN_REPEAT Start');
       let secitons;
       while (true) {
-        shuffle(LIST_OF_SECTIONS);
-        secitons = LIST_OF_SECTIONS.slice(0, 15);
+        shuffle(LIST_OF_DIALOGUES);
+        secitons = LIST_OF_DIALOGUES.slice(0, 15);
         if (secitons.find(dialogue => dialogue.scene)) {
           break;
         }
@@ -137,7 +137,7 @@ function createHandlers(state) {
 function showCustomSlotTypes() {
   console.log('LIST_OF_LISTEN_REPEATS');
   const phrasesSet = new Set();
-  for (const dialogue of LIST_OF_SECTIONS) {
+  for (const dialogue of LIST_OF_DIALOGUES) {
     for (const phrase of dialogue['phrases']) {
       phrasesSet.add(phrase['phrase']);
     }
