@@ -84,7 +84,7 @@ function createHandlers(state) {
           lead += `One more time? `;
         }
       }
-      if (person) {
+      if (person && !again) {
         this.emit(':ask', `${lead}<break time='1s'/>${person} said.<break time='1s'/> <prosody volume="x-loud" rate="slow">${phrase}</prosody>`, MSG_RE_PROMPT);
       } else {
         this.emit(':ask', `${lead}<break time='1s'/><prosody volume="x-loud" rate="slow">${phrase}</prosody>`, MSG_RE_PROMPT);
