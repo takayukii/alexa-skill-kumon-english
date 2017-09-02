@@ -4,7 +4,7 @@ const Alexa = require('alexa-sdk');
 const stringSimilarity = require('string-similarity');
 const {shuffle} = require('./utils');
 
-const MSG_RE_PROMPT = 'Please say that again?';
+const MSG_RE_PROMPT = 'Hello! Can you hear me?';
 const MSG_THANK_YOU = 'Thank you very much. See you at next time!';
 
 const LIST_OF_DIALOGUES = require('../resources/listen-repeats.json');

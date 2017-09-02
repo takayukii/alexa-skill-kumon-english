@@ -4,7 +4,7 @@ const Alexa = require('alexa-sdk');
 const {createHandlers: createListenRepeatHandlers} = require('./lib/listen-repeat-handers');
 const {createHandler: createQuestionAnswerHandlers} = require('./lib/question-answer-handlers');
 
-const MSG_RE_PROMPT = 'Please say that again?';
+const MSG_RE_PROMPT = 'Hello! Can you hear me?';
 const MSG_THANK_YOU = 'Thank you very much. See you at next time!';
 
 const STATE = {
